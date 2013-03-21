@@ -1,0 +1,73 @@
+-----------------------google maps api-------------------------------------
+
+ 
+map.mapTypes.set(key,mapType)
+map.mapTypeControlOptions.mapTypeIds.push(key);
+
+map.overlayMapTypes.insertAt(index,mapType)
+				   .removeAt()
+//v3版本使用了mvc结构，定义mvcArray，所以最好使用其提供的方法insertAt，removeAt等mvcArray数组方法。
+而不要使用[]方法
+
+
+叠加层
+http://code.google.com/intl/zh-CN/apis/maps/documentation/javascript/overlays.html#SubClassing
+
+
+图层
+图层是地图上的对象，包含一个活多个叠加层。使用只需new一个图层对象，调用setMap()添加。
+KmlLayer    		渲染 KML 和 GeoRSS 元素。
+BicyclingLayer
+TrafficLayer
+
+
+KmlLayer：
+KML Placemark 和 GeoRSS point 元素渲染为 Marker，而折线和多边形渲染为 Google Maps API Polyline 和 Polygon 对象。
+同样，KML 文件中的 <GroundOverlay> 元素渲染为地图上的 GroundOverlay 元素。
+KmlLayer 对象通过自动检索地图指定边界的相应地图项，控制这些子叠加层的显示。随着边界的变化，当前可视区域中的地图项会自动渲染。
+注：kml图层服务依赖google服务器，提交kml链接后，服务器获取kml并处理，根据客户端请求区域和级别返回对应的渲染图片。
+
+
+自定义叠加层
+1， google.maps.GroundOverlay  简单的将一张图片叠加到地图上。只需制定url和边界。
+new google.maps.GroundOverlay(
+    "http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg",  imageBounds);
+2，OverlayView基类。通过实现其子类，可以自定义叠加层对象。
+提供了您在创建叠加层时必须实现的若干方法。
+该类还提供了一些方法，用于实现屏幕坐标和地图位置之间的转换。
+要创建自定义叠加层，请执行以下操作：
+将自定义对象的 prototype 设置为 google.maps.OverlayView() 的新实例。这可以有效地实现叠加层类的“子类化”。
+为自定义叠加层创建构造函数，并将该构造函数中的所有初始化参数都设置为自定义属性。
+在原型中实现 onAdd() 方法，以将叠加层附加到地图上。当地图准备好附加叠加层后，系统将会调用 OverlayView.onAdd()。
+在原型中实现 draw() 方法，以处理对象的视觉显示。同样，在对象首次显示后，系统将会调用 OverlayView.draw()。
+您还应当实现 onRemove() 方法，以清理在叠加层中添加的所有元素。	
+
+
+MapType接口
+实现自定义地图类型，需要定义MapType接口规范的一些属性外，需要实现getTile()方法和releaseTile()[可选]方法。
+ImageMapType类提供了某些内置行为以简化图像 MapType 的创建过程。
+需要定义同样的属性外，需要实现getTileUrl()方法
+
+采用此方法实现的自定义地图类型，既可以作为地图类型单独使用；也可以作为叠加层与其他地图类型结合使用；
+作为基础图层：
+mapTypeControlOptions:{mapTypeIds:['hfLayer',google.maps.MapTypeId.ROADMAP]}
+或者 mapTypeControlOptions.mapTypeIds.push(key);
+
+map.mapTypes.set('hfLayer',hfMapType);
+
+map.setMapTypeId('hfLayer')//设置当前图层为hfLayer图层。也可在初始化map对象时候设置参数mapTypeId
+
+作为叠加层:
+
+map.overlayMapTypes.insertAt(index,mapType)
+
+
+投影(projections)
+
+事件：
+//当div改变时，或许使用这个方法可以实现部分图块不显示
+google.maps.event.trigger(map, 'resize')
+
+
+			   
+---------------------------------------------------------------------------		

@@ -1,0 +1,148 @@
+body{
+	margin:0;
+	min-width:800px;
+	overflow:hidden; 
+	/*firefox 禁止选取*/
+	-moz-user-select:	none;  
+}
+
+#header{
+	height:120px; 
+	background:url(../images/banner.png);/*url(../images/top-bg.jpg)  ;*/
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	left:0;
+}
+
+#navbar{
+	position:absolute;
+	bottom:-30px;/*动画  0*/
+	left:0;
+	margin:0px; 
+	height:30px;
+	overflow:hidden;
+	width:100%;
+}
+
+
+#leftside{
+	position:absolute;
+	left:0px;
+	margin:0px;  
+	padding:0;
+	float:left;
+	width:350px;
+	/*min-width:300px;*/ 
+	background:#eee;
+	height:100%;
+	overflow-x:hidden;  
+	overflow-y:auto;  
+	background:white;
+}
+#toggerDiv{
+	position:absolute;
+	left:350px;
+	z-index:100;
+	height:35px;
+	line-height:35px;
+}
+#toggerBtn{ 
+	border:none;
+	height:30px;
+	width:30px; 
+	margin:1px 0 0 5px;
+	background:url(../images/toright.png) no-repeat;
+}
+#toggerBtn.showLeft{ 
+	background:url(../images/toleft.png) no-repeat;
+}
+#listPanel{ 
+	margin:0;
+	padding:0 4px 0 0;
+}
+#contentzone{  
+	position:relative; 
+	maring:0;
+	left:0px;
+	margin-left:350px; 
+}
+#mapContainer{
+	margin:0;
+	position:relative;
+	left:0;
+}
+#map{
+	clear:both; 
+	margin:0; 
+	height:100%;
+}
+/*
+#tabview-box{
+	margin:0; 
+}
+#tabview-container{
+	margin:0;
+	position:relative;
+	left:0;
+} 
+*/
+
+
+/**/
+#header .logo{ 
+	float:left;
+	width:200px;
+	height:50px; 
+}
+#header .title{  
+	float:left;
+	font-size:30px;
+	color:white;
+	margin:20px 0 0 0;
+	font-family:'黑体'; 
+	font-weight:bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.7);  
+	*position:absolute; 
+	*left:200px; 
+	filter:dropshadow(color=#000000,offx=-1,offy=-1,positive=1);
+}
+#navbar ul{ 
+	list-style:none;
+	margin:0;
+	padding:0;
+	width:100%; 
+	height:100%;
+	opacity:0.7;
+	filter:alpha(opacity=70) \9;
+	background: url(../images/menu_stretch.gif) repeat-x; 
+	/*
+	 letter-spacing:normal
+	*/
+}
+
+#navbar ul li{ 
+	display:inline;
+	margin:0px; 
+	float:left;
+	padding:0px; 
+	border-right: 1px solid #555;
+}
+#navbar ul li a{ 
+	display:block;
+	margin:0px; 
+	width:200px;
+	padding:0 5px;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	color:white;  
+} 
+#navbar ul li a:hover { 
+	color:red;
+	font-weight:bold; 
+	cursor:hand;
+	background: #1376c9 url(../images/menu_active.gif) repeat-x;
+	
+}
+  

@@ -1,0 +1,14 @@
+.yui3-toolbar{
+	border:1px solid #D5DDF3;
+	height:200px;
+}
+.yui3-toolbar-content{
+	position:relative;
+}  
+.yui3-js-enabled .yui3-toolbar-loading {
+    /* Hide overlay markup offscreen */
+    position:absolute;
+    top:10000em;
+    left:10000em;
+}
+ 

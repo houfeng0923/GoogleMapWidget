@@ -1,0 +1,13 @@
+ 
+/*kbox*/
+
+.yui3-overlay-content {border:10px solid;border-color:rgba(128, 128, 128, 0.5);*border:6px solid #7f7f7f;font-size:12px;font-family:Tahoma;-moz-border-radius: 10px;-khtml-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
+
+.yui3-overlay-content .yui3-widget-hd {font-weight:normal;color:white;height:19px;vertical-align:middle;text-align:left;padding:2px 2px 2px 4px;border:0px;background-color:steelblue;}
+.yui3-overlay-content .yui3-widget-hd .title{float:left;}
+.yui3-overlay-content .yui3-widget-hd .close{float:right;cursor:mouse}
+
+.yui3-overlay-content .yui3-widget-bd {text-align:left;padding:10px;border:0px solid #0000aa;background-color:#fff;}
+.yui3-overlay-content .yui3-widget-ft {padding:2px;background:white;}
+.yui3-widget-ft div{text-align:center;}
+.yui3-widget-ft .okbtn{margin:10px 0;}

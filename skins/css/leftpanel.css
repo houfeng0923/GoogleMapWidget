@@ -1,0 +1,171 @@
+
+#listheader {
+	position:relative;
+	left:0;
+    background-color:#b0bccc;
+    border:1px solid #000;
+	border-top:none;
+    margin:0px;
+    height:35px;
+    width:345px; 
+	text-align:center; 
+    background:-moz-linear-gradient(top, #b0bccc, rgba(109, 131, 161, 1));
+	background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#d8dee6),
+        color-stop(0.01, #b0bccc),
+        color-stop(0.49, #889bb3),
+        color-stop(0.50, #8094ae),
+        to(#6d83a1)     
+    );
+	background:url(../images/lefttitle.png) repeat-x \9;
+}
+
+#listheader h3 {
+    color: #fff;
+    margin:0;
+    padding:10px 0;
+    text-align:center; 
+	vertical-align:middle;
+    font-size:108%;
+    font-weight:bold;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.7);    
+	*font-size:14px;
+	*font-weight:normal; 
+	*position:absolute; 
+	*left:150px; 
+	filter:dropshadow(color=#000000,offx=-1,offy=-1,positive=1);
+} 
+.list-info{
+	position:relative;
+	left:0px;
+	width:700px;  
+}
+
+.list-info-content {
+	position:relative;
+    padding:0;
+    margin:0 3px 0 0 ;
+    border:1px solid #000; 
+    border-top:0;
+    width:345px; 
+	float:left;
+	overflow:hidden;
+}
+.list-ul ul{
+	margin:0px;
+}
+.list-ul li {
+    clear:left;    
+    margin:0;
+    padding:0;
+    list-style:none;
+    border-bottom:1px solid #ccc;
+    background-color:#fff;
+    vertical-align:middle;
+    text-align:right;
+    overflow:hidden;
+    height:2em;
+    line-height:2em;
+}
+ 
+.list-ul a{
+	display:block; 
+	padding-left:1em; 
+	text-decoration:none;
+	color:#000000;
+	height:100%; 
+}
+
+.list-ul li span {
+    float:left;
+}
+.list-ul li a:hover{
+	background-color:#ccc;
+}
+
+.btn-arrow {
+    border:1px solid #000;
+    background-color:#EE8811;
+    color:#fff;
+    font-weight:bold;
+    margin-right:5px;    
+	cursor:pointer;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px; 
+	*margin-top:2px;
+	*padding-top:2px;
+}
+
+.list-ul li a:hover .btn-arrow{
+	visibility:visible;
+}
+.list-ul li a .btn-arrow{
+	visibility:hidden;
+}
+.list-div form{
+	display:block;
+	margin:3px;
+}
+.list-div fieldset{
+	border:1px solid #ccc;
+	margin:0px;
+	padding:3px;
+}
+.list-div legend{ 
+	border:1px solid #000;
+	background-color:#ccc;
+	padding:1px 3px ;
+	font-weight:bold;
+}
+.list-div .desc{ 
+	display:block;
+	padding:3px;   
+	text-indent:1.5em;/*block */
+}
+.list-div .desc h5{
+	text-align:center;
+	margin-bottom:1em;
+}
+.list-div .btn-arrow{
+	display:block;
+	float:right;
+}
+
+.waitingBar{
+	position:relative;
+	top:5px;
+	left:0px; 
+	text-align:center;
+	margin:auto;
+	z-index:10;
+}
+.layer-ul{
+	margin:0;
+	width:100%;
+}
+.layer-ul li{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.layer-ul li a{
+	display:block;
+	border:1px solid #ccc;
+	background:white;
+	margin:1px;
+	padding:1px 3px;
+	cursor:default;
+	text-align:center;
+	min-width:200px;
+	height:14px;
+}
+.layer-ul li a.loaded{
+	background:url(../images/apply.png) repeat-y top right ;  
+}
+.layer-ul li a:hover{
+	background-color:#EE8811;
+}
+ 
